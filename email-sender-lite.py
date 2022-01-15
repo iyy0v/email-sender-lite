@@ -1,10 +1,10 @@
 import smtplib, ssl
-#import getpass
+import getpass
 
 port  = 465
 email = input(" Enter your email address: ")
-password = input(" Enter your password: ")
-#getpass.getpass(" Enter your password: ",password)
+password = ""
+password = getpass.getpass(" Enter your password: ",password)
 context = ssl.create_default_context()
 
 with smtplib.SMTP_SSL("smtp.gmail.com",port,context=context) as server:
